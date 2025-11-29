@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "date": "2017 - 2023",
+        "texto": "Vendedor, Supervisor e Gerente",
+        "link": "https://www.instagram.com/agecobassessoria/",
+        "empresa": "Agecob",
+        "imgs": [
+            "img/AGECOB1.webp",
+            "img/AGECOB2.webp",
+            "img/AGECOB3.webp"
+        ]
+    },
+    {
+        "id": 2,
+        "date": "2024 — 2025",
+        "texto": "Gestor de Logística",
+        "link": "https://www.instagram.com/ovoo_go/",
+        "empresa": "Ovoo Go",
+        "imgs": [
+            "img/OVOO1.webp",
+            "img/OVOO2.webp",
+            "img/OVOO3.webp"
+        ]
+    },
+    {
+        "id": 3,
+        "date": "2025 — 2025",
+        "texto": "Controle de Estoque &amp; Entrada NF-e",
+        "link": "https://www.instagram.com/rocha.acessorios.auto/",
+        "empresa": "Rocha Auto Peças",
+        "imgs": [
+            "img/ROCHA1.jpg",
+            "img/ROCHA2.jpg",
+            "img/ROCHA3.jpg"
+        ]
+    }
+]

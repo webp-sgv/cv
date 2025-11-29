@@ -1,0 +1,34 @@
+[
+    {
+        "url": "/",
+        "background_color": "",
+        "text": "",
+        "text_color": "black",
+        "icon_src": "svg/Home.svg",
+        "icon_alt": "Svg de Casa"
+    },
+    {
+        "url": "https://linkedin.com/in/jean-rodrigues-9117a4392",
+        "background_color": "#0a66c2",
+        "text": "Linkedin",
+        "text_color": "white",
+        "icon_src": "svg/Linkedin.svg",
+        "icon_alt": "Svg de linkedin"
+    },
+    {
+        "url": "https://www.instagram.com/jean.rodrigues.pereira/",
+        "background_color": "radial-gradient(circle farthest-corner at 10% 75%, rgb(245 210 93) 0%, rgb(214 171 84) 12%, rgba(250, 145, 55, 1) 25%, rgb(235 65 65 / 46%) 40%, transparent 75%), linear-gradient(-15deg, rgba(35, 75, 215, 1) 20%, rgba(195, 60, 190, 1) 90%)",
+        "text": "Instagram",
+        "text_color": "white",
+        "icon_src": "svg/Instagram.svg",
+        "icon_alt": "Svg de instagram"
+    },
+    {
+        "url": "https://wa.me/5562981056908",
+        "background_color": "#4fce5d",
+        "text": "WhatsApp",
+        "text_color": "white",
+        "icon_src": "svg/wpp.svg",
+        "icon_alt": "Svg de whatsapp"
+    }
+]

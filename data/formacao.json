@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "status": 200,
+        "status_icon": "not-pulse",
+        "status_text": "&nbsp;&nbsp;&nbsp;&nbsp;Finalizado",
+        "titulo": "Fundamental - Completo",
+        "local": "Dom Pedro II, Caldas Novas"
+    },
+    {
+        "id": 2,
+        "status": 200,
+        "status_icon": "not-pulse",
+        "status_text": "&nbsp;&nbsp;&nbsp;&nbsp;Finalizado",
+        "titulo": "HTML + CSS | Curso em Video - Prof. Gustavo G.",
+        "local": "YouTube"
+    },
+    {
+        "id": 2,
+        "status": 404,
+        "status_icon": "pulse-alert",
+        "status_text": "&nbsp;&nbsp;&nbsp;&nbsp;Pendente",
+        "titulo": "Bacharelado em Ciência da Computação - Incompleto",
+        "local": "Estácio de Sá, Goiânia"
+    }
+]

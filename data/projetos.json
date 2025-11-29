@@ -1,0 +1,68 @@
+[
+    {
+        "status": 404,
+        "id": 1,
+        "item_linha": {
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Pendente",
+            "status_icon": "pulse-alert",
+            "conteudo": {
+                "titulo": "Landing Pages",
+                "url": "",
+                "icone_link_src": "./svg/OpenNewTabIcon.svg"
+            }
+        }
+    },
+    {
+        "status": 200,
+        "id": 2,
+        "item_linha": {
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Agosto/2022",
+            "status_icon": "not-pulse",
+            "conteudo": {
+                "titulo": "Disparador de WhatsApp",
+                "url": "https://drive.google.com/file/d/1nh6P4oDZr7TwhhLiaBTu0jjmxEkDrK6-/view?usp=sharing",
+                "icone_link_src": "./svg/OpenNewTabIcon.svg"
+            }
+        }
+    },
+{
+        "status": 200,
+        "id": 3,
+        "item_linha": {
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Outubro/2025",
+            "status_icon": "not-pulse",
+            "conteudo": {
+                "titulo": "Cardapio para WhatsApp",
+                "url": "https://webp-sgv.github.io/card-pio-fc-marmita/",
+                "icone_link_src": "./svg/OpenNewTabIcon.svg"
+            }
+        }
+    },
+    
+    {
+        "status": 404,
+        "id": 4,
+        "item_linha": {
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Pendente",
+            "status_icon": "pulse-alert",
+            "conteudo": {
+                "titulo": "Automação usando Python",
+                "url": "",
+                "icone_link_src": "./svg/OpenNewTabIcon.svg"
+            }
+        }
+    },
+    {
+        "status": 404,
+        "id": 5,
+        "item_linha": {
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Pendente",
+            "status_icon": "pulse-alert",
+            "conteudo": {
+                "titulo": "Formulas de Excel",
+                "url": "",
+                "icone_link_src": "./svg/OpenNewTabIcon.svg"
+            }
+        }
+    }
+]

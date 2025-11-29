@@ -1,0 +1,15 @@
+<svg viewBox="0 0 640 640" style="background-color:#4fce5d;"
+	xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<g class="layer">
+	<title>Whatsapp - Solid</title>
+
+	<path fill="#0000" stroke="#f5f5f5"
+		d="m 80,560 l 50,-100 a240,240 200 1,1 50,50 z"
+		stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+	<path fill="#f5f5f5" stroke="#f5f5f5"
+		d="m 220,180 l40,50 l-40,40 c 0,0 50,80 140,140 l40,-30 l50,40
+		c 0,0 -40,40 -100,20 c 0,0 -140,-80 -160,-160 c 0,0 -10,-40 10,-80
+		c 0,0 10,-20 20,-20 z"
+		stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

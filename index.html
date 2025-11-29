@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 Jean C. P. Rodrigues 👑</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="img/b.ico" type="image/x-icon">
+
+    <!-- LINKS PROFILE -->
+    <script>
+        document.addEventListener('click', function (event) {
+            const elementoClicado = event.target.closest('.link-external');
+            const elementoClicadoProjetos = event.target.closest('.link-external-projeto');
+
+            if (elementoClicado) {
+                const urlDestino = elementoClicado.getAttribute('data-url');
+                if (urlDestino) {
+                    window.open(urlDestino, '_blank');
+                }
+            }
+
+            if (elementoClicadoProjetos) {
+                const urlDestino2 = elementoClicadoProjetos.getAttribute('data-url');
+                if (urlDestino2) {
+                    window.open(urlDestino2, '_blank');
+                }
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="desktop">
+
+        <div class="header">
+            <div class="heading-2-noah-levin">Jean Rodrigues</div>
+            <div class="profissional-de-vendas-tecnologia-6-anos-de-experi-ncia">
+                Vendas &amp; Tecnologia | 6 Anos de Experiência
+            </div>
+
+            <div id="box-profile" class="component-master"></div>
+
+            <img class="image" src="img/Jean.webp" />
+        </div>
+
+        <div class="main">
+            <div class="content">
+
+                <div class="section">
+                    <div class="heading-3-about">Sobre</div>
+
+                    <div class="block-item-text texto-sobre">
+                        <input type="checkbox" hidden class="read-more-state" id="read-more">
+                        <div class="read-more-wrap">
+                            <p>
+                                6 anos de experiência sólida e consistente em Estratégia de Vendas e
+                                Gestão de Equipes, comprovada por resultados documentados no Grupo
+                                Agecob.
+                                <br />
+                            </p>
+                            <p class="read-more-target">
+                                Forte habilidade em Liderança, Inteligência Emocional e construção de
+                                relacionamentos duradouros para o alto desempenho.
+                                <br />
+                                Busco aplicar esta expertise em um novo desafio que exija a união da
+                                minha paixão por Gestão e Vendas com meu sólido background técnico em
+                                desenvolvimento e bancos de dados para impulsionar o crescimento e a
+                                eficiência operacional.
+                            </p>
+
+                        </div>
+                        <label for="read-more" class="read-more-trigger_closed">Ler mais</label>
+                        <label for="read-more" class="read-more-trigger_opened">Ler menos</label>
+
+                    </div>
+                </div>
+
+                <!-- EXPERIENCIAS DINAMICO -->
+                <div id="listagem-dinamica-experiencias" class="work">
+
+                    <div class="heading-3-work-experience">Experiência Profissional</div>
+
+                    <div id="btn-sw-experiencias" class="row-item-not-it selected" fn="true">
+
+                        <div class="date">
+                            <div class="component-2-1">
+                                <div class="text txt-ponto">•••</div>
+                            </div>
+                        </div>
+
+                        <div class="contents-more">
+                            <div class="link">
+                                <div class="line-1-text txt-texto-ex">
+                                    Mostrar mais
+                                </div>
+                            </div>
+
+                            <div class="info-cont-most info-cont-ex" style="display: flex;">
+                                <div class="line-2 txt-info txt-cont-ex">
+                                    1 item ocultado
+                                </div>
+                                <img class="open-new-tab-icon-eye-off" src="./svg/Eye off.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- PROJETOS DINAMICO -->
+                <div id="listagem-dinamica-projetos" class="side-projects">
+                    <div class="heading-3-side-projects">Projetos</div>
+
+                    <div id="btn-sw-projetos" class="row-item-not-it row-item-not-it-pj selected" fn="true">
+
+                        <div class="date">
+                            <div class="component-2-1">
+                                <div class="text txt-ponto">•••</div>
+                            </div>
+                        </div>
+
+                        <div class="contents-more">
+                            <div class="link">
+                                <div class="line-1-text txt-texto-pj">
+                                    Mostrar mais
+                                </div>
+                            </div>
+
+                            <div class="info-cont-most info-cont-pj" style="display: flex;">
+                                <div class="line-2 txt-info txt-cont-pj">
+                                    4 item ocultado
+                                </div>
+                                <img class="open-new-tab-icon-eye-off" src="./svg/Eye off.svg" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FORMACAO DINAMICO -->
+                <div id="listagem-dinamica-formacao" class="education">
+
+                    <div class="heading-3-education">Formação</div>
+
+                </div>
+
+            </div>
+
+            <!-- CONTATO -->
+            <div class="footer">
+                <div class="section2">
+                    <div class="heading-3-contact">Contato</div>
+                    <div class="contact-section">
+                        <div class="row-item">
+                            <div class="date">WhatsApp</div>
+                            <div class="contents">
+                                <div class="link">
+                                    <div class="line-1-text">+ 55 ( 62 ) 9 8105 - 6908</div>
+                                    <img class="open-new-tab-icon8" src="./svg/OpenNewTabIcon.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item">
+                            <div class="date">Instagram</div>
+                            <div class="contents">
+                                <div class="link">
+                                    <div class="line-1-text">jean.rodrigues.pereira</div>
+                                    <img class="open-new-tab-icon9" src="./svg/OpenNewTabIcon.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item">
+                            <div class="date">E-mail</div>
+                            <div class="contents">
+                                <div class="link">
+                                    <div class="line-1-text">jeantng2016@gmail.com</div>
+                                    <img class="open-new-tab-icon10" src="./svg/OpenNewTabIcon.svg" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item">
+                            <div class="date">Linkedin</div>
+                            <div class="contents">
+                                <div class="link">
+                                    <div class="line-1-text2">Jean Rodrigues</div>
+                                    <img class="open-new-tab-icon11" src="./svg/OpenNewTabIcon.svg" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script/main.js"></script>
+
+</body>
+
+</html>
