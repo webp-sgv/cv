@@ -41,6 +41,8 @@
 
 .tema-natal.lt-pp-noel4 img {
     width: 100%;
+    height: 200vh;
+    object-fit: cover;
     -webkit-mask-image: linear-gradient(to left, white 0%, transparent 100%);
 }
 
@@ -54,6 +56,8 @@
 
 .tema-natal.lt-pp-noel5 img {
     width: 100%;
+    height: 200vh;
+    object-fit: cover;
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
