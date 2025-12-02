@@ -1,11 +1,18 @@
+/* =======================================
+   1. REGRA GERAL E LAYOUT PRINCIPAL
+   ======================================= */
+body {
+    margin: 0px;
+}
+
 .desktop,
 .desktop * {
+    /* Modelo de Caixa */
     box-sizing: border-box;
 }
 
 .desktop {
-    background: var(--marketingbackground, #ffffff);
-    padding: 20px;
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -13,80 +20,221 @@
     justify-content: flex-start;
     position: relative;
     overflow-y: auto;
+
+    /* Modelo de Caixa/Espaçamento */
+    padding: 20px;
+
+    /* Aparência */
+    /* background: var(--marketingbackground, #ffffff); */
 }
 
+.section-main {
+    margin: 10px;
+    padding: 50px 75px 50px 50px;
+    background: var(--marketingbackground, #f6f6f6);
+    border-radius: 24px;
+}
+
+/* =======================================
+   2. HEADER E ELEMENTOS RELACIONADOS
+   ======================================= */
+
 .header {
+    /* Layout */
+    position: relative;
     flex-shrink: 0;
+
+    margin: 0 0 20px 0px;
+
+    /* Modelo de Caixa/Tamanho */
     width: 600px;
     height: 93px;
-    position: relative;
 }
 
 .group-4 {
     position: absolute;
     inset: 0;
+    /* atalho para top, right, bottom, left: 0 */
 }
 
+/* Imagem de Perfil */
+.image {
+    /* Posição */
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+
+    /* Tamanho e Aparência */
+    width: 92px;
+    border-radius: 100px;
+    object-fit: cover;
+    aspect-ratio: 92/93;
+}
+
+/* =====================================
+   ESTILOS DE CONTÊINER
+   ===================================== */
+
+/* Base para elementos fixos/sticky que precisam de Z-index */
+.sticky-decorator-container {
+    position: sticky;
+    top: 0;
+    /* Estilos comuns para garantir que fiquem acima do conteúdo principal */
+    z-index: 99;
+    width: fit-content;
+}
+
+/* Contêiner para a imagem de fundo em tela cheia */
+.fixed-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Geralmente o Z-index é baixo para ficar atrás de tudo */
+    z-index: 1;
+}
+
+/* =====================================
+   POSICIONAMENTO DOS DECORADORES
+   ===================================== */
+
+.decorator-left-top {
+    left: 0;
+    z-index: 99;
+}
+
+.decorator-right-top {
+    /* Mantenha o left: 11px se o objetivo for um pequeno deslocamento,
+       mas 'right: 0' ou 'margin-left: auto' é mais comum para direita */
+    left: 11px;
+    /* Mantido conforme o original */
+    z-index: 999;
+}
+
+.decorator-fixed-bottom-right {
+    /* Este contêiner DIV na verdade precisa ser FIXED se a imagem for FIXED.
+       Simplificando, movemos o estilo FIXED para a imagem. */
+    left: 11px;
+    z-index: 999;
+    /* Se a div for sticky, ela só se move se o conteúdo scrollar.
+       Se a imagem for fixed, ela se mantém na viewport. */
+}
+
+/* =====================================
+   ESTILOS DAS IMAGENS
+   ===================================== */
+
+.fixed-gift-image {
+    position: fixed;
+    width: 7%;
+    bottom: -18px;
+    right: 43px;
+    z-index: 1000;
+    /* Pode ser útil um z-index bem alto */
+}
+
+.full-page-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Garante que a imagem cubra toda a div */
+}
+
+/* Título e Cargo */
 .heading-2-noah-levin {
-    cursor: default;
-    color: var(--grey-1, #111111);
-    text-align: left;
-    font-family: var(--title-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--title-font-size, 20px);
-    line-height: var(--title-line-height, 26px);
-    font-weight: var(--title-font-weight, 400);
+    /* Posição */
     position: absolute;
     left: 108px;
     bottom: 64.55px;
     top: 0px;
-    width: 399px;
+
+    /* Layout */
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 399px;
+
+    /* Tipografia */
+    color: var(--grey-1, #111111);
+    font-family: var(--title-font-family, "Inter-Regular", sans-serif);
+    font-size: var(--title-font-size, 20px);
+    line-height: var(--title-line-height, 26px);
+    font-weight: var(--title-font-weight, 400);
+    text-align: left;
+
+    /* Outros */
+    cursor: default;
 }
 
 .profissional-de-vendas-tecnologia-6-anos-de-experi-ncia {
-    color: var(--grey-2, #555555);
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
+    /* Posição */
     position: absolute;
     left: 108px;
     bottom: 33.65px;
     top: 32px;
-    width: 399px;
+
+    /* Layout */
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 399px;
+
+    /* Tipografia */
+    color: var(--grey-2, #555555);
+    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
+    font-size: var(--body-font-size, 14px);
+    line-height: var(--body-line-height, 180%);
+    font-weight: var(--body-font-weight, 400);
+    text-align: left;
 }
 
+/* Componentes de Links/Botões (Badges) */
 .component-master {
+    /* Layout */
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    position: absolute;
+
+    /* Posição */
     left: 108px;
     bottom: 0px;
-    flex-direction: row;
-    position: absolute;
-    justify-content: flex-start;
 }
 
-.component-2 {
-    background: var(--grey-4, #f6f6f6);
-    border-radius: 12px;
-    padding: 1.8px 10px 3px 10px;
+.component-2,
+.component-2-1 {
+    /* Layout */
     display: flex;
     flex-direction: row;
     gap: 0px;
     align-items: center;
     justify-content: center;
+
+    /* Modelo de Caixa/Espaçamento */
+    border-radius: 12px;
+    padding: 1.8px 10px 3px 10px;
     height: 26.26px;
+    overflow: hidden;
+
+    /* Aparência */
+    background: var(--grey-4, #f6f6f6);
+}
+
+.component-2 {
+    /* Posição */
     left: 108px;
     bottom: 0px;
-    overflow: hidden;
+    /* Modelo de Caixa/Espaçamento */
     margin: 0 10px 0 0px;
 }
 
+/* Estado de Interação dos Links (Badges) */
 .link-external {
     transition: all .1s ease-in-out;
 }
@@ -96,118 +244,130 @@
     border-bottom: 1.5px solid;
 }
 
-.component-2-1 {
-    background: var(--grey-4, #f6f6f6);
-    border-radius: 12px;
-    padding: 1.8px 10px 3px 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    height: 26.26px;
-    overflow: hidden;
-}
-
 .text {
+    /* Tipografia */
     color: var(--grey-2, #555555);
-    text-align: left;
     font-family: "Inter-Regular", sans-serif;
     font-size: 12px;
     line-height: 100%;
     font-weight: 400;
-    position: relative;
+    text-align: left;
+
+    /* Layout */
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 
-.image {
-    border-radius: 100px;
-    width: 92px;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
-    object-fit: cover;
-    aspect-ratio: 92/93;
-}
+/* =======================================
+   3. MAIN CONTENT (Blocos e Seções)
+   ======================================= */
 
 .main {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-shrink: 0;
-    width: 600px;
     position: relative;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 600px;
+    flex-shrink: 0;
 }
 
 .content {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
     align-self: stretch;
     flex-shrink: 0;
-    position: relative;
 }
 
 .section {
-    padding: 0px 0px 0.69px 0px;
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 3.98px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Espaçamento */
+    padding: 0px 0px 0.69px 0px;
     align-self: stretch;
     flex-shrink: 0;
-    position: relative;
 }
 
-.heading-3-about {
-    cursor: default;
+/* Títulos de Seção (Sobre, Experiência, Projetos, etc.) */
+.heading-3-about,
+.heading-3-work-experience,
+.heading-3-side-projects,
+.heading-3-education,
+.heading-3-contact {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    /* Tipografia */
     color: var(--grey-1, #111111);
-    text-align: left;
     font-family: var(--section-header-font-family, "Inter-Regular", sans-serif);
     font-size: var(--section-header-font-size, 14px);
     line-height: var(--section-header-line-height, 140%);
     font-weight: var(--section-header-font-weight, 400);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    text-align: left;
+
+    /* Outros */
+    cursor: default;
 }
 
+.heading-3-contact {
+    /* Modelo de Caixa/Tamanho */
+    width: 54.14px;
+    height: 22.4px;
+}
+
+
+/* =======================================
+   4. SEÇÃO SOBRE (Read More)
+   ======================================= */
+
 .texto-sobre {
-    color: var(--grey-2, #555555);
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
-    position: relative;
-    width: 600px;
-    height: fit-content;
+    /* Layout */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 600px;
+    height: fit-content;
+
+    /* Tipografia */
+    color: var(--grey-2, #555555);
+    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
+    font-size: var(--body-font-size, 14px);
+    line-height: var(--body-line-height, 180%);
+    font-weight: var(--body-font-weight, 400);
+    text-align: left;
 }
 
 .read-more-wrap p {
     margin: 0 0 5px 0px;
 }
-.read-more-trigger_closed:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-.read-more-trigger_opened:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
+
+/* Esconde e mostra os gatilhos e o conteúdo */
 .read-more-target,
 .read-more-trigger_opened {
     display: none;
@@ -222,71 +382,310 @@
     display: none;
 }
 
-.work {
+/* Efeito de Interação (Gatilhos) */
+.read-more-trigger_closed:hover,
+.read-more-trigger_opened:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* =======================================
+   5. LISTAS DE EXPERIÊNCIA/PROJETOS/EDUCAÇÃO
+   ======================================= */
+
+.work,
+.side-projects,
+.education {
+    /* Layout */
     display: flex;
     flex-direction: column;
-    gap: 24.7px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
     align-self: stretch;
     flex-shrink: 0;
-    position: relative;
 }
 
-.heading-3-work-experience {
-    cursor: default;
-    color: var(--grey-1, #111111);
-    text-align: left;
-    font-family: var(--section-header-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--section-header-font-size, 14px);
-    line-height: var(--section-header-line-height, 140%);
-    font-weight: var(--section-header-font-weight, 400);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.work {
+    gap: 24.7px;
 }
 
+.side-projects,
+.education {
+    gap: 20px;
+}
+
+/* Linha de Item Padrão (experiência/contato) */
 .row-item {
-    cursor: default;
+    /* Layout */
     display: flex;
     flex-direction: row;
     gap: 0px;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-shrink: 0;
     position: relative;
+    flex-shrink: 0;
+
+    /* Outros */
+    cursor: default;
     transition: all 1s ease-in-out;
+}
+
+/* Data / Período / Título do Contato */
+.date,
+.date2 {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 130px;
+    height: 23px;
+
+    /* Tipografia */
+    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
+    font-size: var(--body-font-size, 14px);
+    line-height: var(--body-line-height, 180%);
+    font-weight: var(--body-font-weight, 400);
+    text-align: left;
+}
+
+.date {
+    color: #1d0303;
+}
+
+.date2 {
+    color: var(--grey-3, #6d6d6d);
+}
+
+/* Conteúdo Principal (Texto/Detalhes) */
+.contents {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 470px;
+}
+
+.link {
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Linha de Texto Principal (Experiência/Contato) */
+.line-1-text,
+.line-1-text2 {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    /* Tipografia */
+    color: #111111;
+    font-family: "Inter-Regular", sans-serif;
+    font-size: 14px;
+    line-height: 180%;
+    font-weight: 400;
+    text-align: left;
+}
+
+.line-1-text2 {
+    text-decoration: underline;
+}
+
+/* Ícones de Nova Aba */
+.open-new-tab-icon,
+.open-new-tab-icon2,
+.open-new-tab-icon3,
+.open-new-tab-icon8,
+.open-new-tab-icon9,
+.open-new-tab-icon10,
+.open-new-tab-icon11 {
+    /* Modelo de Caixa/Tamanho */
+    flex-shrink: 0;
+    width: 14px;
+    height: 17px;
+    /* Outros */
+    position: relative;
+    overflow: visible;
+}
+
+/* Linha de Texto Secundário (Detalhes, Duração) */
+.line-2,
+.line-22 {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
+    align-self: stretch;
+
+    /* Tipografia */
+    color: var(--grey-2, #555555);
+    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
+    font-size: var(--body-font-size, 14px);
+    line-height: var(--body-line-height, 180%);
+    font-weight: var(--body-font-weight, 400);
+    text-align: left;
+}
+
+/* =======================================
+   6. ITENS DE EXPANSÃO / OCULTAÇÃO (•••)
+   ======================================= */
+
+.row-item-not-it {
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+
+    /* Modelo de Caixa/Espaçamento */
+    background: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    border: 2px dotted #6d6d6dbd !important;
+
+    /* Transição */
+    transition: all .5s ease-in-out;
+}
+
+.row-item-not-it.selected:hover {
+    cursor: pointer;
+    background: #f6f6f6 !important;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.contents-more {
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+
+    /* Modelo de Caixa/Tamanho */
+    width: 470px;
+}
+
+.contents-more .link {
+    margin: 0 10px 0px 0;
+}
+
+.info-cont-most {
+    display: flex;
+}
+
+.open-new-tab-icon-eye-off {
+    margin: 0 0 0 10px;
+    width: 15px;
+}
+
+/* =======================================
+   7. SEÇÃO DE IMAGENS (Image Area)
+   ======================================= */
+
+.image-area {
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Modelo de Caixa/Espaçamento */
+    padding: 0px 0px 0px 130px;
+    align-self: stretch;
+    flex-shrink: 0;
+}
+
+.image2 {
+    /* Modelo de Caixa/Tamanho */
+    flex-shrink: 0;
+    width: 150px;
+    height: 90px;
+    position: relative;
+}
+
+.image3 {
+    /* Posição */
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    top: 0%;
+
+    /* Tamanho e Aparência */
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    border-width: 1px;
+    object-fit: cover;
+}
+
+/* =======================================
+   8. ANIMAÇÕES (Pulse)
+   ======================================= */
+
+.pulse-error,
+.pulse-alert,
+.not-pulse {
+    /* Aparência base */
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    transform: scale(1);
 }
 
 .pulse-error {
     background: rgb(222, 84, 72);
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
     box-shadow: 0 0 0 0 rgba(222, 84, 72, 1);
-    transform: scale(1);
     animation: pulse-error 2s infinite;
 }
 
 .pulse-alert {
     background: #f2ce17;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
     box-shadow: 0 0 0 0 #f2ce17;
-    transform: scale(1);
     animation: pulse-alert 2s infinite;
 }
 
 .not-pulse {
     background: rgb(14, 186, 72);
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
     box-shadow: 0 0 0 0 rgb(14, 186, 72, 1);
-    transform: scale(1);
-    animation: pulse 2s infinite;
+    /* Se "not-pulse" é verde, a animação 'pulse' deve ser definida (não estava no código original). */
+    /* Assumindo que 'pulse' é similar, mas usa a cor verde: */
+    /* animation: pulse 2s infinite; */
 }
 
 @keyframes pulse-error {
@@ -323,363 +722,46 @@
     }
 }
 
-.list-rm {
-    cursor: default;
-}
 
-.row-item-not-it {
-    background: aliceblue;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-    transition: all .5s ease-in-out;
-
-}
-
-.info-cont-most {
-    display: flex;
-}
-
-.row-item-not-it {
-    border: 2px dotted #6d6d6dbd !important;
-    transition: all .5s ease-in-out;
-}
-
-.row-item-not-it.selected:hover {
-    cursor: pointer;
-    background: #f6f6f6 !important;
-    border-radius: 10px;
-    transition: all .5s ease-in-out;
-}
-
-.date {
-    color: #1d0303;
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
-    position: relative;
-    width: 130px;
-    height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.contents {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    width: 470px;
-    position: relative;
-}
-
-.contents-more {
-
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 470px;
-    position: relative;
-}
-
-.contents-more .link {
-    margin: 0 10px 0px 0;
-}
-
-.link {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.line-1-text {
-    color: #111111;
-    text-align: left;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 14px;
-    line-height: 180%;
-    font-weight: 400;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.open-new-tab-icon {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.open-new-tab-icon-eye-off {
-    margin: 0 0 0 10px;
-    width: 15px;
-}
-
-.line-2 {
-    color: #555555;
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
-    position: relative;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.image-area {
-    padding: 0px 0px 0px 130px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.image2 {
-    flex-shrink: 0;
-    width: 150px;
-    height: 90px;
-    position: relative;
-}
-
-.image3 {
-    border-radius: 8px;
-    border-style: solid;
-    border-color: #e5e5e5;
-    border-width: 1px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0%;
-    left: 0%;
-    bottom: 0%;
-    top: 0%;
-    object-fit: cover;
-}
-
-.open-new-tab-icon2 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.open-new-tab-icon3 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.side-projects {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.heading-3-side-projects {
-    cursor: default;
-    color: var(--grey-1, #111111);
-    text-align: left;
-    font-family: var(--section-header-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--section-header-font-size, 14px);
-    line-height: var(--section-header-line-height, 140%);
-    font-weight: var(--section-header-font-weight, 400);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.open-new-tab-icon {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.education {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.heading-3-education {
-    cursor: default;
-    color: var(--grey-1, #111111);
-    text-align: left;
-    font-family: var(--section-header-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--section-header-font-size, 14px);
-    line-height: var(--section-header-line-height, 140%);
-    font-weight: var(--section-header-font-weight, 400);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.date2 {
-    color: var(--grey-3, #6d6d6d);
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
-    position: relative;
-    width: 130px;
-    height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.line-22 {
-    color: var(--grey-2, #555555);
-    text-align: left;
-    font-family: var(--body-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--body-font-size, 14px);
-    line-height: var(--body-line-height, 180%);
-    font-weight: var(--body-font-weight, 400);
-    position: relative;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
+/* =======================================
+   9. FOOTER / CONTATO
+   ======================================= */
 
 .footer {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 0px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
     align-self: stretch;
     flex-shrink: 0;
-    position: relative;
 }
 
 .section2 {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
+
+    /* Modelo de Caixa/Tamanho */
     align-self: stretch;
     flex-shrink: 0;
-    position: relative;
-}
-
-.heading-3-contact {
-    cursor: default;
-    color: var(--grey-1, #111111);
-    text-align: left;
-    font-family: var(--section-header-font-family, "Inter-Regular", sans-serif);
-    font-size: var(--section-header-font-size, 14px);
-    line-height: var(--section-header-line-height, 140%);
-    font-weight: var(--section-header-font-weight, 400);
-    position: relative;
-    width: 54.14px;
-    height: 22.4px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .contact-section {
+    /* Layout */
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
     flex-shrink: 0;
-    position: relative;
-}
-
-.open-new-tab-icon8 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.open-new-tab-icon9 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.open-new-tab-icon10 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
-}
-
-.line-1-text2 {
-    color: #111111;
-    text-align: left;
-    font-family: "Inter-Regular", sans-serif;
-    font-size: 14px;
-    line-height: 180%;
-    font-weight: 400;
-    text-decoration: underline;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.open-new-tab-icon11 {
-    flex-shrink: 0;
-    width: 14px;
-    height: 17px;
-    position: relative;
-    overflow: visible;
 }

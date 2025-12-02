@@ -1,0 +1,138 @@
+.tema-natal-hide {
+    display: none;
+}
+
+.tema-natal.lt-pp-noel1 {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.tema-natal.lt-pp-noel2 {
+    position: sticky;
+    left: 11px;
+    top: 0;
+    z-index: 999;
+    width: fit-content;
+}
+
+.tema-natal.lt-pp-noel3 {
+    position: sticky;
+    left: 11px;
+    top: 0;
+    z-index: 999;
+    width: fit-content;
+}
+
+.tema-natal.lt-pp-noel3 img {
+    position: fixed;
+    width: 7%;
+    bottom: -18px;
+    right: 43px;
+}
+
+
+.tema-natal.lt-pp-noel4 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.tema-natal.lt-pp-noel4 img {
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+.tema-natal.lt-pp-noel5 {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transform: rotateY(360deg);
+}
+
+.tema-natal.lt-pp-noel5 img {
+    width: 100%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.tema-natal.lt-pp-noel6 {
+    position: relative;
+    width: 100%;
+    top: -360px;
+}
+
+.tema-natal.lt-pp-noel6 img {
+    position: absolute;
+    right: -187px;
+    top: 0;
+    width: 50%;
+}
+
+.tema-natal.lt-pp-noel7 {
+    position: absolute;
+    top: 0;
+}
+
+.tema-natal.lt-pp-noel7 img {
+    position: relative;
+    width: 150px;
+    top: 10px;
+    left: -70px;
+}
+
+/* Chapéu (Elemento de Decoração) */
+.chapeu-papai-noel {
+    position: relative;
+    top: -5px;
+    left: 11px;
+    width: 55px;
+}
+
+.lateral-papai-noel {
+    position: absolute;
+    left: -10px;
+    width: 10%;
+    top: 25px;
+}
+
+.arvore-papai-noel {
+    position: fixed;
+    width: 25%;
+    bottom: -10px;
+    right: -125px;
+}
+
+/* Snowflake base style */
+.snowflake {
+    position: fixed;
+    top: -50px;
+    color: white;
+    font-size: 1em;
+    opacity: 0.8;
+    pointer-events: none;
+    user-select: none;
+    animation: fall linear infinite;
+}
+
+/* Falling animation with slight drift */
+@keyframes fall {
+    to {
+        transform: translateX(var(--horizontal-drift)) translateY(100vh) rotate(var(--rotation));
+    }
+}
+
+/* Lens flare effect style */
+.flare {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
+}
+
+/* Blurred snowflake for depth */
+.blurred {
+    filter: blur(2px);
+    opacity: 0.5;
+}

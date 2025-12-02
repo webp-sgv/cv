@@ -1,13 +1,13 @@
 [
     {
-        "status": 404,
+        "status": 200,
         "id": 1,
         "item_linha": {
-            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Pendente",
-            "status_icon": "pulse-alert",
+            "status": "&nbsp;&nbsp;&nbsp;&nbsp;Dezembro/2025",
+            "status_icon": "not-pulse",
             "conteudo": {
                 "titulo": "Landing Pages",
-                "url": "",
+                "url": "https://webp-sgv.github.io/vendas-1/",
                 "icone_link_src": "./svg/OpenNewTabIcon.svg"
             }
         }
